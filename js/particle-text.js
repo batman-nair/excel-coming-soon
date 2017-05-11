@@ -1,5 +1,5 @@
 var colors = ["#468966","#FFF0A5", "#FFB03B","#B64926", "#8E2800"];
-var font = "tahoma";
+var font = "Pacifico";
 var canvas = document.querySelector("#scene"),
 ctx = canvas.getContext("2d"),
 particles = [],
@@ -99,8 +99,8 @@ function initScene(text){
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  ctx.font = "bold "+Math.floor((ww/10)*(text.length >14 || fontSizeFactor === null ?14/text.length:fontSizeFactor))+"px " + font;
-	// console.log(ctx.font);
+  ctx.font = Math.floor((ww/10)*(text.length >14 || fontSizeFactor === null ?14/text.length:fontSizeFactor))+"px " + font;
+	console.log(ctx.font);
 	ctx.textAlign = "center";
 	ctx.fillText(text, ww/2, wh/2);
 
